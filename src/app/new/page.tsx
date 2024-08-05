@@ -4,9 +4,9 @@ const page = () => {
   return (
     <form
       action="#"
-      className="flex flex-col max-w-80 mx-auto p-6 rounded mt-20 gap-4 shadow bg-gray-200"
+      className="flex flex-col max-w-96 mx-auto p-6 rounded mt-20 gap-4 shadow bg-gray-200"
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col ">
         <label htmlFor="title">Title</label>
         <input
           type="text"
@@ -16,7 +16,7 @@ const page = () => {
           className="border p-2 rounded focus:outline-green-400"
         />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col ">
         <label htmlFor="code">Code</label>
         <textarea
           name="code"
