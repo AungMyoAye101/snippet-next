@@ -1,4 +1,6 @@
 import { db } from "@/db";
+import { create } from "domain";
+import { redirect } from "next/navigation";
 import React from "react";
 
 const page = () => {
@@ -6,11 +8,20 @@ const page = () => {
     "use server";
     const title = formData.get("title") as string;
     const code = formData.get("code") as string;
+
+    const snippet = await db.snippet.create({
+      data: {
+        title,
+        code,
+      },
+    });
+    console.log(snippet);
+    redirect("/");
   };
 
   return (
     <form
-      action=""
+      action={createSnippet}
       className="flex flex-col max-w-96 mx-auto p-6 rounded mt-20 gap-4 shadow bg-gray-200"
     >
       <div className="flex flex-col ">
