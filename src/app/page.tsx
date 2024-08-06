@@ -8,5 +8,9 @@ export default async function Home() {
       <Link href={`/snippets/${snippet.id}`}>{snippet.title}</Link>
     </div>
   ));
-  return <div>{renderSnippets}</div>;
+  return (
+    <div className="flex flex-col gap-2 px-6 py-10 rounded-md shadow border ">
+      {renderSnippets}
+    </div>
+  );
 }
