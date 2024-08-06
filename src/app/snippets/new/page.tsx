@@ -22,7 +22,7 @@ const page = () => {
   return (
     <form
       action={createSnippet}
-      className="flex flex-col max-w-96 mx-auto p-6 rounded mt-20 gap-4 shadow bg-gray-200"
+      className="flex flex-col  p-6 rounded mt-20 gap-4 shadow bg-gray-200"
     >
       <div className="flex flex-col ">
         <label htmlFor="title">Title</label>

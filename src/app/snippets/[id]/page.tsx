@@ -9,7 +9,14 @@ const SnippetShowPage = async ({ params }: { params: { id: string } }) => {
   if (!snippet) {
     notFound();
   }
-  return <div>{snippet.title}</div>;
+  return (
+    <div>
+      <h1>{snippet.title} </h1>
+      <pre className="p-3 border border-gray-200 bg-zinc-100 rounded">
+        <code>{snippet.code}</code>
+      </pre>
+    </div>
+  );
 };
 
 export default SnippetShowPage;
