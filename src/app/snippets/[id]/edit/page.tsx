@@ -1,8 +1,22 @@
+import SnippetEditForm from "@/components/Snippet_Edit_Form";
+import { db } from "@/db";
+import { notFound } from "next/navigation";
 import React from "react";
 
-const SnippetEditPage = ({ params }: { params: { id: string } }) => {
+const SnippetEditPage = async ({ params }: { params: { id: string } }) => {
   const id = parseInt(params.id);
-  return <div>SnippetEditPage</div>;
+  const snippet = await db.snippet.findFirst({
+    where: { id },
+  });
+  if (!snippet) {
+    notFound();
+  }
+  console.log(snippet);
+  return (
+    <div>
+      <SnippetEditForm snippets={snippet} />
+    </div>
+  );
 };
 
 export default SnippetEditPage;
