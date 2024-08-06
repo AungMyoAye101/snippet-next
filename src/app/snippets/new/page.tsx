@@ -1,6 +1,13 @@
+import { db } from "@/db";
 import React from "react";
 
 const page = () => {
+  const createSnippet = async (formData: FormData) => {
+    "use server";
+    const title = formData.get("title") as string;
+    const code = formData.get("code") as string;
+  };
+
   return (
     <form
       action=""
@@ -21,11 +28,13 @@ const page = () => {
         <textarea
           name="code"
           id="code"
-          placeholder="Enter snippets..."
+          placeholder="Enter code..."
           className="border p-2 rounded focus:outline-green-400"
         />
       </div>
-      <button className="rounded shadow py-2 bg-blue-300">Submit</button>
+      <button type="submit" className="rounded shadow py-2 bg-blue-300">
+        Submit
+      </button>
     </form>
   );
 };
