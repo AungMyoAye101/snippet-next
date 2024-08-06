@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <form
-      action="#"
+      action=""
       className="flex flex-col max-w-96 mx-auto p-6 rounded mt-20 gap-4 shadow bg-gray-200"
     >
       <div className="flex flex-col ">
