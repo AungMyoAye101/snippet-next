@@ -2,6 +2,7 @@ import SnippetEditForm from "@/components/Snippet_Edit_Form";
 import { db } from "@/db";
 import { notFound } from "next/navigation";
 import React from "react";
+import * as action from "@/actions";
 
 const SnippetEditPage = async ({ params }: { params: { id: string } }) => {
   const id = parseInt(params.id);
