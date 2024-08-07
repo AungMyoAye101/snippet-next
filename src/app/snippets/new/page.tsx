@@ -15,7 +15,7 @@ const page = () => {
         code,
       },
     });
-    console.log(snippet);
+
     redirect("/");
   };
 
