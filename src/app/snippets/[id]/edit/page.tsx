@@ -11,7 +11,7 @@ const SnippetEditPage = async ({ params }: { params: { id: string } }) => {
   if (!snippet) {
     notFound();
   }
-  console.log(snippet);
+
   return (
     <div>
       <SnippetEditForm snippets={snippet} />
