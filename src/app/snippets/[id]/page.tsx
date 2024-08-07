@@ -18,12 +18,12 @@ const SnippetShowPage = async ({ params }: { params: { id: string } }) => {
       <div className="self-end flex gap-2">
         <Link
           href={`/snippets/${snippet.id}/edit`}
-          className="px-4 py-2 rounded shadow text-sm hover:scale-95 transition-transform ease-out border hover:border-green-300"
+          className="px-4 py-2 rounded shadow text-sm hover:scale-95 transition-all ease-out border border-blue-400 hover:bg-blue-400"
         >
           Edit
         </Link>
         <form action={deleteSnippetAction}>
-          <button className="px-4 py-2 rounded shadow text-sm hover:scale-95 transition-transform ease-out border hover:border-green-300">
+          <button className="px-4 py-2 rounded shadow text-sm hover:scale-95 transition-all ease-out border border-red-600 hover:bg-red-500">
             Delete
           </button>
         </form>

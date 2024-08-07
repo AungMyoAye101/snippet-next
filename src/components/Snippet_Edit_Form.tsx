@@ -28,7 +28,7 @@ const SnippetEditForm = ({ snippets }: SnippetProp) => {
       <form action={editSnippetAction}>
         <button
           type="submit"
-          className="py-2 px-4 rounded border border-base-200 shadow w-full bg-sky-300"
+          className="py-2  rounded border border-base-200 shadow w-full transition-colors ease-in-out duration-150 bg-sky-300 hover:bg-blue-500 hover:text-slate-50"
         >
           Save
         </button>
