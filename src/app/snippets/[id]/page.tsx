@@ -15,7 +15,7 @@ const SnippetShowPage = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="flex flex-col gap-2 px-6 py-10 rounded-md shadow border ">
       <h1 className="text-lg font-bold ">{snippet.title} </h1>
-      <div className="space-x-2 self-end">
+      <div className="self-end flex gap-2">
         <Link
           href={`/snippets/${snippet.id}/edit`}
           className="px-4 py-2 rounded shadow text-sm hover:scale-95 transition-transform ease-out border hover:border-green-300"

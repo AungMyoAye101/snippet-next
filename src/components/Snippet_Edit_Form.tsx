@@ -15,7 +15,8 @@ const SnippetEditForm = ({ snippets }: SnippetProp) => {
 
   const editSnippetAction = actions.editSnippet.bind(null, snippets.id, code);
   return (
-    <div>
+    <div className="space-y-2 ">
+      <h1 className="text-lg font-semibold">Edit the code </h1>
       <Editor
         height="40vh"
         theme="vs-dark"
@@ -25,7 +26,12 @@ const SnippetEditForm = ({ snippets }: SnippetProp) => {
         onChange={onChangeHandeler}
       />
       <form action={editSnippetAction}>
-        <button type="submit">Save</button>
+        <button
+          type="submit"
+          className="py-2 px-4 rounded border border-base-200 shadow w-full bg-sky-300"
+        >
+          Save
+        </button>
       </form>
     </div>
   );
