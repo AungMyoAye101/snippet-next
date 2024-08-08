@@ -30,7 +30,7 @@ const page = () => {
           className="border p-2 rounded focus:outline-green-400"
         />
       </div>
-      <div>{formState.message}</div>
+      <div className="text-red-400">{formState.message}</div>
       <button type="submit" className="rounded shadow py-2 bg-blue-300">
         create
       </button>
