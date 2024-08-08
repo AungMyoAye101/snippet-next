@@ -1,27 +1,14 @@
-import { db } from "@/db";
-import { create } from "domain";
-import { redirect } from "next/navigation";
+"use client";
 import React from "react";
-
+import { useFormState } from "react-dom";
+import * as actions from "@/actions";
 const page = () => {
-  const createSnippet = async (formData: FormData) => {
-    "use server";
-    const title = formData.get("title") as string;
-    const code = formData.get("code") as string;
-
-    const snippet = await db.snippet.create({
-      data: {
-        title,
-        code,
-      },
-    });
-
-    redirect("/");
-  };
-
+  const [formState, action] = useFormState(actions.createSnippet, {
+    message: "",
+  });
   return (
     <form
-      action={createSnippet}
+      action={action}
       className="flex flex-col  p-6 rounded mt-20 gap-4 shadow bg-gray-200"
     >
       <div className="flex flex-col ">
@@ -43,8 +30,9 @@ const page = () => {
           className="border p-2 rounded focus:outline-green-400"
         />
       </div>
+      <div>{formState.message}</div>
       <button type="submit" className="rounded shadow py-2 bg-blue-300">
-        Submit
+        create
       </button>
     </form>
   );

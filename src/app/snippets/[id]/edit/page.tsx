@@ -14,7 +14,7 @@ const SnippetEditPage = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="border border-base-100 p-4 rounded bg-slate-100 shadow">
+    <div className="border border-base-100 p-4 rounded bg-gray-200 shadow">
       <SnippetEditForm snippets={snippet} />
     </div>
   );
